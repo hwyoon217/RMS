@@ -10,3 +10,16 @@ C:\Users\admin\source\repos\RM\obj\Debug\RM.csproj.Up2Date
 C:\Users\admin\source\repos\RM\obj\Debug\RM.exe
 C:\Users\admin\source\repos\RM\obj\Debug\RM.pdb
 C:\Users\admin\source\repos\RM\obj\Debug\RM.frmLogin.resources
+C:\Users\User\source\repos\RM\bin\Debug\RM.exe.config
+C:\Users\User\source\repos\RM\bin\Debug\RM.exe
+C:\Users\User\source\repos\RM\bin\Debug\RM.pdb
+C:\Users\User\source\repos\RM\bin\Debug\Guna.UI2.dll
+C:\Users\User\source\repos\RM\obj\Debug\RM.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\RM\obj\Debug\RM.frmLogin.resources
+C:\Users\User\source\repos\RM\obj\Debug\RM.frmMain.resources
+C:\Users\User\source\repos\RM\obj\Debug\RM.Properties.Resources.resources
+C:\Users\User\source\repos\RM\obj\Debug\RM.csproj.GenerateResource.cache
+C:\Users\User\source\repos\RM\obj\Debug\RM.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\RM\obj\Debug\RM.csproj.Up2Date
+C:\Users\User\source\repos\RM\obj\Debug\RM.exe
+C:\Users\User\source\repos\RM\obj\Debug\RM.pdb

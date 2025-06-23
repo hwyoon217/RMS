@@ -1,26 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\admin\\source\\repos\\RM\\",
+  "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\RM\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|c:\\users\\admin\\source\\repos\\rm\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|c:\\users\\user\\source\\repos\\rm\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|solutionrelative:frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|c:\\users\\admin\\source\\repos\\rm\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|C:\\Users\\User\\source\\repos\\RM\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|solutionrelative:frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|C:\\Users\\admin\\source\\repos\\RM\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|solutionrelative:frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|C:\\Users\\User\\source\\repos\\RM\\mainclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|solutionrelative:mainclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|c:\\users\\admin\\source\\repos\\rm\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|C:\\Users\\User\\source\\repos\\RM\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|solutionrelative:frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|c:\\users\\admin\\source\\repos\\rm\\mainclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|solutionrelative:mainclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|C:\\Users\\User\\source\\repos\\RM\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|solutionrelative:frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,32 +30,41 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmMain.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\RM\\frmMain.cs",
+              "RelativeDocumentMoniker": "frmMain.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\RM\\frmMain.cs",
+              "RelativeToolTip": "frmMain.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAWwBYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T05:14:27.715Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmMain.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\RM\\frmMain.cs",
-              "RelativeDocumentMoniker": "frmMain.cs",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\RM\\frmMain.cs",
-              "RelativeToolTip": "frmMain.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAnwBQAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T05:14:27.715Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "frmMain.cs [\uB514\uC790\uC778]",
-              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\RM\\frmMain.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\RM\\frmMain.cs",
               "RelativeDocumentMoniker": "frmMain.cs",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\RM\\frmMain.cs [\uB514\uC790\uC778]",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\RM\\frmMain.cs [\uB514\uC790\uC778]",
               "RelativeToolTip": "frmMain.cs [\uB514\uC790\uC778]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-20T04:33:20.55Z",
@@ -63,26 +72,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "MainClass.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\RM\\MainClass.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\RM\\MainClass.cs",
               "RelativeDocumentMoniker": "MainClass.cs",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\RM\\MainClass.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\RM\\MainClass.cs",
               "RelativeToolTip": "MainClass.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAAwCAAAAAPAAAAAAAAAA==",
+              "ViewState": "AQIAAAMAAAAAAAAAAADwvxwAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-20T04:17:08.057Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "frmLogin.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\RM\\frmLogin.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\RM\\frmLogin.cs",
               "RelativeDocumentMoniker": "frmLogin.cs",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\RM\\frmLogin.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\RM\\frmLogin.cs",
               "RelativeToolTip": "frmLogin.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAlwBgAAAAsAAAAAAAAAA==",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAwwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-20T03:47:13.516Z",
               "EditorCaption": ""
@@ -91,9 +100,9 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "frmLogin.cs [\uB514\uC790\uC778]",
-              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\RM\\frmLogin.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\RM\\frmLogin.cs",
               "RelativeDocumentMoniker": "frmLogin.cs",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\RM\\frmLogin.cs [\uB514\uC790\uC778]",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\RM\\frmLogin.cs [\uB514\uC790\uC778]",
               "RelativeToolTip": "frmLogin.cs [\uB514\uC790\uC778]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-20T03:36:01.034Z",
