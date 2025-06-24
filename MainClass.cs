@@ -11,7 +11,7 @@ namespace RM
     class MainClass
     {
         // Data Source     >>    교수용PC = 학교컴 , DESKTOP-KO5M0LU  =  집컴
-        public static readonly string con_string = "Data Source=DESKTOP-KO5M0LU; Initial Catalog=RM;Persist Security Info=True; User ID=sa; Password=std001;";
+        public static readonly string con_string = "Data Source=교수용PC; Initial Catalog=RM;Persist Security Info=True; User ID=sa; Password=std001;";
         public static SqlConnection con = new SqlConnection(con_string);
         
         // Method to check user validation
@@ -26,11 +26,21 @@ namespace RM
 
             if (dt.Rows.Count > 0) {
                 isValid = true;
+                USER = dt.Rows[0]["uName"].ToString();
             }
 
             return isValid;
-
-            //  create main form
         }
+        // create property for username
+
+        public static string user;
+
+        public static string USER {
+            get { return user; }
+            private set { user = value; }
+        }
+
+        
+
     }
 }

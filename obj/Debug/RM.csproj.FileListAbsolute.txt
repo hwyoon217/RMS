@@ -23,3 +23,8 @@ C:\Users\User\source\repos\RM\obj\Debug\RM.csproj.CoreCompileInputs.cache
 C:\Users\User\source\repos\RM\obj\Debug\RM.csproj.Up2Date
 C:\Users\User\source\repos\RM\obj\Debug\RM.exe
 C:\Users\User\source\repos\RM\obj\Debug\RM.pdb
+C:\Users\admin\source\repos\RM\obj\Debug\RM.frmMain.resources
+C:\Users\admin\source\repos\RM\obj\Debug\RM.frmHome.resources
+C:\Users\admin\source\repos\RM\obj\Debug\RM.SampleAdd.resources
+C:\Users\admin\source\repos\RM\obj\Debug\RM.SampleView.resources
+C:\Users\admin\source\repos\RM\obj\Debug\RM.View.frmCategoryView.resources

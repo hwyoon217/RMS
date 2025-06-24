@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHome.Designer.cs">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +73,27 @@
     <Compile Include="MainClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SampleAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SampleAdd.Designer.cs">
+      <DependentUpon>SampleAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SampleView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SampleView.Designer.cs">
+      <DependentUpon>SampleView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmCategoryView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmCategoryView.Designer.cs">
+      <DependentUpon>frmCategoryView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmHome.resx">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -77,6 +104,15 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SampleAdd.resx">
+      <DependentUpon>SampleAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SampleView.resx">
+      <DependentUpon>SampleView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmCategoryView.resx">
+      <DependentUpon>frmCategoryView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -114,6 +150,63 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="icon_img\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon_img\home_white2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon_img\button3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon_img\button3_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon_img\product.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon_img\product_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon_img\table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon_img\table_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon_img\idcard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon_img\idcard_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon_img\pos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon_img\pos_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon_img\cook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon_img\cook_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon_img\setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon_img\setting_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon_img\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon_img\pen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon_img\recyclebin.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
