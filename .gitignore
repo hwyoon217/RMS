@@ -1,0 +1,30 @@
+# Visual Studio 관련 파일들
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# 빌드 결과물
+bin/
+obj/
+
+# 로그 파일
+*.log
+
+# Visual Studio Code 설정
+.vscode/
+
+# 패키지 매니저 파일
+packages/
+
+# NuGet 관련
+*.nupkg
+*.snupkg
+*.nuspec
+*.psmdcp
+
+# OS 관련
+Thumbs.db
+ehthumbs.db
+Desktop.ini
