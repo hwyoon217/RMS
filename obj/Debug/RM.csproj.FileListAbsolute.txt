@@ -28,3 +28,4 @@ C:\Users\admin\source\repos\RM\obj\Debug\RM.frmHome.resources
 C:\Users\admin\source\repos\RM\obj\Debug\RM.SampleAdd.resources
 C:\Users\admin\source\repos\RM\obj\Debug\RM.SampleView.resources
 C:\Users\admin\source\repos\RM\obj\Debug\RM.View.frmCategoryView.resources
+C:\Users\admin\source\repos\RM\obj\Debug\RM.Model.frmCategoryAdd.resources

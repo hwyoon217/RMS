@@ -83,6 +83,16 @@ namespace RM.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap category_white {
+            get {
+                object obj = ResourceManager.GetObject("category_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap cook {
             get {
                 object obj = ResourceManager.GetObject("cook", resourceCulture);
