@@ -29,3 +29,16 @@ C:\Users\admin\source\repos\RM\obj\Debug\RM.SampleAdd.resources
 C:\Users\admin\source\repos\RM\obj\Debug\RM.SampleView.resources
 C:\Users\admin\source\repos\RM\obj\Debug\RM.View.frmCategoryView.resources
 C:\Users\admin\source\repos\RM\obj\Debug\RM.Model.frmCategoryAdd.resources
+C:\Users\User\source\repos\RM\obj\Debug\RM.frmHome.resources
+C:\Users\User\source\repos\RM\obj\Debug\RM.Model.frmCategoryAdd.resources
+C:\Users\User\source\repos\RM\obj\Debug\RM.SampleAdd.resources
+C:\Users\User\source\repos\RM\obj\Debug\RM.SampleView.resources
+C:\Users\User\source\repos\RM\obj\Debug\RM.View.frmCategoryView.resources
+C:\Users\User\source\repos\RM\obj\Debug\RM.View.frmTableView.resources
+C:\Users\User\source\repos\RM\obj\Debug\RM.Model.frmTableAdd.resources
+C:\Users\User\source\repos\RM\obj\Debug\RM.Model.frmStaffAdd.resources
+C:\Users\User\source\repos\RM\obj\Debug\RM.View.frmStaffView.resources
+C:\Users\User\source\repos\RM\obj\Debug\RM.Model.frmProductAdd.resources
+C:\Users\User\source\repos\RM\obj\Debug\RM.View.frmProductView.resources
+C:\Users\User\source\repos\RM\obj\Debug\RM.Model.frmPOS.resources
+C:\Users\User\source\repos\RM\obj\Debug\RM.Model.ucProduct.resources

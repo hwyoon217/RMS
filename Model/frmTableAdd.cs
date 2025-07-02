@@ -9,26 +9,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RM.Model
-{
-    public partial class frmCategoryAdd: SampleAdd
-    {
-        public frmCategoryAdd()
-        {
+namespace RM.Model {
+    public partial class frmTableAdd : SampleAdd {
+        public frmTableAdd() {
             InitializeComponent();
         }
 
         public int id = 0;
+
         public override void btnSave_Click(object sender, EventArgs e) {
             string qry = "";
 
             if (id == 0) {
                 // insert
-                qry = "Insert into category values(@Name)";
+                qry = "Insert into tables values(@Name)";
             }
             else {
                 // update
-                qry = "Update category Set catName = @Name where catID = @id";
+                qry = "Update tables Set tname = @Name where tid = @id";
             }
 
             Hashtable ht = new Hashtable();

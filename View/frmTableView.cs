@@ -11,17 +11,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RM.View
-{
-    public partial class frmCategoryView: SampleView
-    {
-        public frmCategoryView()
-        {
+namespace RM.View {
+    public partial class frmTableView : SampleView {
+        public frmTableView() {
             InitializeComponent();
         }
 
+        private void frmTable_Load(object sender, EventArgs e) {
+            // create table first
+            GetData();
+        }
+
         public void GetData() {
-            string qry = "Select * from category where catName like '%" + tbSearch.Text + "%' ";
+            string qry = "Select * from tables where tname like '%" + tbSearch.Text + "%' ";
             ListBox lb = new ListBox();
             lb.Items.Add(dgvid);
             lb.Items.Add(dgvName);
@@ -29,15 +31,13 @@ namespace RM.View
             MainClass.LoadData(qry, guna2DataGridView1, lb);
         }
 
-
-        private void frmCategoryView_Load(object sender, EventArgs e) {
-            GetData();
-        }
-
         public override void btnAdd_Click(object sender, EventArgs e) {
-            MainClass.BlurBackground(new frmCategoryAdd());
-            //frmCategoryAdd frm = new frmCategoryAdd();
+            // add blue effect
+            //frmTableAdd frm = new frmTableAdd();
             //frm.ShowDialog();
+
+            MainClass.BlurBackground(new frmTableAdd());
+
             GetData();
 
         }
@@ -49,9 +49,9 @@ namespace RM.View
 
         private void guna2DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e) {
             if (guna2DataGridView1.CurrentCell.OwningColumn.Name == "dgvedit") {
-                
-                // this is change as we have to set form text property before open
-                frmCategoryAdd frm = new frmCategoryAdd();
+
+
+                frmTableAdd frm = new frmTableAdd();
                 frm.id = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells["dgvid"].Value);
                 frm.txtName.Text = Convert.ToString(guna2DataGridView1.CurrentRow.Cells["dgvName"].Value);
                 MainClass.BlurBackground(frm);
@@ -64,9 +64,9 @@ namespace RM.View
                 guna2MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo;
 
                 if (guna2MessageDialog1.Show("Are you sure you want to delete?") == DialogResult.Yes) {
-                    
+
                     int id = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells["dgvid"].Value);
-                    string qry = "Delete from category where catID =" + id + "";
+                    string qry = "Delete from tables where tid =" + id + "";
                     Hashtable ht = new Hashtable();
                     MainClass.SQL(qry, ht);
 
@@ -75,7 +75,7 @@ namespace RM.View
                     guna2MessageDialog1.Show("Deleted successfully");
                     GetData();
                 }
-                
+
             }
         }
     }
