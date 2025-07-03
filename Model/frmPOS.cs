@@ -16,6 +16,9 @@ namespace RM.Model {
             InitializeComponent();
         }
 
+        public int MainID = 0;
+        public string OrderType;
+
         private void btnExit_Click(object sender, EventArgs e) {
             this.Close();
         }
@@ -133,6 +136,35 @@ namespace RM.Model {
                 tot += int.Parse(item.Cells["dgvAmount"].Value.ToString());
             }
             lblTotal.Text = tot.ToString();
+        }
+
+        private void btnNew_Click(object sender, EventArgs e) {
+            lblTable.Text = "";
+            lblTable.Visible = false;
+            lblWaiter.Text = "";
+            lblWaiter.Visible = false;
+
+            guna2DataGridView1.Rows.Clear();
+            MainID = 0;
+            lblTotal.Text = "00";
+        }
+
+        private void btnDelivery_Click(object sender, EventArgs e) {
+            lblTable.Text = "";
+            lblTable.Visible = false;
+            lblWaiter.Text = "";
+            lblWaiter.Visible = false;
+
+            OrderType = "Delivery";
+        }
+
+        private void btnTakeAway_Click(object sender, EventArgs e) {
+            lblTable.Text = "";
+            lblTable.Visible = false;
+            lblWaiter.Text = "";
+            lblWaiter.Visible = false;
+
+            OrderType = "Take Away";
         }
     }
 }
