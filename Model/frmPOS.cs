@@ -59,6 +59,11 @@ namespace RM.Model {
 
         private void b_Click(object sender, EventArgs e) {
             Guna.UI2.WinForms.Guna2Button b = (Guna.UI2.WinForms.Guna2Button)sender;
+            if (b.Text == "All Categoires") {
+               tbSearch.Text = "1";
+               tbSearch.Text = "";
+                return;
+            }
             foreach (var item in ProductPanel.Controls) {
                 var pro = (ucProduct)item;
                 pro.Visible = pro.PCategory.ToLower().Contains(b.Text.Trim().ToLower());
@@ -154,7 +159,6 @@ namespace RM.Model {
             lblTable.Visible = false;
             lblWaiter.Text = "";
             lblWaiter.Visible = false;
-
             OrderType = "Delivery";
         }
 
@@ -163,8 +167,28 @@ namespace RM.Model {
             lblTable.Visible = false;
             lblWaiter.Text = "";
             lblWaiter.Visible = false;
-
             OrderType = "Take Away";
+        }
+
+        private void btnDin_Click(object sender, EventArgs e) {
+            // need to create form for table selection and waiter selection
+            frmTableSelect frm = new frmTableSelect();
+            MainClass.BlurBackground(frm);
+            if (frm.TableName != "") {
+                lblTable.Text = frm.TableName;
+            }
+            else {
+                lblTable.Text = "";
+            }
+
+            frmWaiterSelect frm2 = new frmWaiterSelect();
+            MainClass.BlurBackground(frm2);
+            if (frm2.WaiterName != "") {
+                lblWaiter.Text = frm2.WaiterName;
+            }
+            else {
+                lblWaiter.Text = ""; 
+            }
         }
     }
 }
