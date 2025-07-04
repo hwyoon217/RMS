@@ -157,6 +157,12 @@
     <Compile Include="View\frmTableView.Designer.cs">
       <DependentUpon>frmTableView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmKitchenView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmKitchenView.Designer.cs">
+      <DependentUpon>frmKitchenView.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
     </EmbeddedResource>
@@ -203,6 +209,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmCategoryView.resx">
       <DependentUpon>frmCategoryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmKitchenView.resx">
+      <DependentUpon>frmKitchenView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmProductView.resx">
       <DependentUpon>frmProductView.cs</DependentUpon>
@@ -315,6 +324,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="icon_img\biryani.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon_img\icons8-new-ticket-90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon_img\icons8-hand-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon_img\icons8-bill-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon_img\icons8-delivery-time-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon_img\icons8-take-away-food-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon_img\icons8-restaurant-table-90.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

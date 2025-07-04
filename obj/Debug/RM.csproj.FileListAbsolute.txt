@@ -44,3 +44,14 @@ C:\Users\User\source\repos\RM\obj\Debug\RM.Model.frmPOS.resources
 C:\Users\User\source\repos\RM\obj\Debug\RM.Model.ucProduct.resources
 C:\Users\User\source\repos\RM\obj\Debug\RM.Model.frmTableSelect.resources
 C:\Users\User\source\repos\RM\obj\Debug\RM.Model.frmWaiterSelect.resources
+C:\Users\admin\source\repos\RM\obj\Debug\RM.Model.frmPOS.resources
+C:\Users\admin\source\repos\RM\obj\Debug\RM.Model.frmProductAdd.resources
+C:\Users\admin\source\repos\RM\obj\Debug\RM.Model.frmStaffAdd.resources
+C:\Users\admin\source\repos\RM\obj\Debug\RM.Model.frmTableAdd.resources
+C:\Users\admin\source\repos\RM\obj\Debug\RM.Model.frmTableSelect.resources
+C:\Users\admin\source\repos\RM\obj\Debug\RM.Model.frmWaiterSelect.resources
+C:\Users\admin\source\repos\RM\obj\Debug\RM.Model.ucProduct.resources
+C:\Users\admin\source\repos\RM\obj\Debug\RM.View.frmProductView.resources
+C:\Users\admin\source\repos\RM\obj\Debug\RM.View.frmStaffView.resources
+C:\Users\admin\source\repos\RM\obj\Debug\RM.View.frmTableView.resources
+C:\Users\admin\source\repos\RM\obj\Debug\RM.View.frmKitchenView.resources

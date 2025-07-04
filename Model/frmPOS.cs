@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -64,19 +65,20 @@ namespace RM.Model {
                tbSearch.Text = "";
                 return;
             }
+
             foreach (var item in ProductPanel.Controls) {
                 var pro = (ucProduct)item;
                 pro.Visible = pro.PCategory.ToLower().Contains(b.Text.Trim().ToLower());
             }
         }
 
-        private void Additems(string id, string name, string cat, string price, Image image) {
+        private void Additems(string id, string proID, string name, string cat, string price, Image image) {
             var w = new ucProduct() {
                 PName = name,
                 PPrice = price,
                 PCategory = cat,
                 PImage = image,
-                id = Convert.ToInt32(id)
+                id = Convert.ToInt32(proID)
             };
 
             ProductPanel.Controls.Add(w);
@@ -86,7 +88,7 @@ namespace RM.Model {
 
                 // this will check it product already there then a one to quauntity and update price
                 foreach (DataGridViewRow item in guna2DataGridView1.Rows) {
-                    if (Convert.ToInt32(item.Cells["dgvid"].Value) == wdg.id) {
+                    if (Convert.ToInt32(item.Cells["dgvProID"].Value) == wdg.id) {
                         item.Cells["dgvQty"].Value = int.Parse(item.Cells["dgvQty"].Value.ToString()) + 1;
                         item.Cells["dgvAmount"].Value = int.Parse(item.Cells["dgvQty"].Value.ToString()) *
                             double.Parse(item.Cells["dgvPrice"].Value.ToString());
@@ -95,8 +97,8 @@ namespace RM.Model {
                         return;
                     }
                 }
-                // this line add new product
-                guna2DataGridView1.Rows.Add(new object[] { 0, wdg.id, wdg.PName, 1, wdg.PPrice, wdg.PPrice });
+                // this line add new product First for sr# and 2nd 0 from id
+                guna2DataGridView1.Rows.Add(new object[] { 0, 0, wdg.id, wdg.PName, 1, wdg.PPrice, wdg.PPrice });
                 GetTotal();
             };
         }
@@ -113,7 +115,7 @@ namespace RM.Model {
                 Byte[] imagearray = (byte[])item["pImage"];
                 byte[] imagebytearray = imagearray;
 
-                Additems(item["pID"].ToString(), item["pName"].ToString(), item["catName"].ToString(), item["pPrice"].ToString(),  Image.FromStream(new MemoryStream(imagearray))); 
+                Additems("0", item["pID"].ToString(), item["pName"].ToString(), item["catName"].ToString(), item["pPrice"].ToString(),  Image.FromStream(new MemoryStream(imagearray))); 
             }
         }
 
@@ -171,24 +173,99 @@ namespace RM.Model {
         }
 
         private void btnDin_Click(object sender, EventArgs e) {
+            OrderType = "Din In";
             // need to create form for table selection and waiter selection
             frmTableSelect frm = new frmTableSelect();
             MainClass.BlurBackground(frm);
             if (frm.TableName != "") {
                 lblTable.Text = frm.TableName;
+                lblTable.Visible = true;
             }
             else {
                 lblTable.Text = "";
+                lblTable.Visible = false;
             }
 
             frmWaiterSelect frm2 = new frmWaiterSelect();
             MainClass.BlurBackground(frm2);
             if (frm2.WaiterName != "") {
                 lblWaiter.Text = frm2.WaiterName;
+                lblWaiter.Visible = true;
             }
             else {
-                lblWaiter.Text = ""; 
+                lblWaiter.Text = "";
+                lblWaiter.Visible = false;
             }
+        }
+
+        private void btnKot_Click(object sender, EventArgs e) {
+            // Save the data in database
+
+            string qry1 = "";  // main table
+            string qry2 = "";  // detail table
+
+            int detailID = 0;
+
+            if (MainID == 0) { //insert
+                qry1 = @"Insert into tblMain values(@aDate, @aTime, @TableName, @WaiterName, @status, @orderType,
+                        @total, @received, @change);
+                            Select SCOPE_IDENTITY()";    // get recent add id , value
+            }
+            else { // update
+                qry1 = @"update tblMain set status = @status, total = @total, received = @received, change = @change
+                        where MainID = @ID)";
+            }
+            
+            SqlCommand cmd = new SqlCommand(qry1, MainClass.con);
+            cmd.Parameters.AddWithValue("@ID", MainID);
+            cmd.Parameters.AddWithValue("@aDate", Convert.ToDateTime(DateTime.Now.Date));
+            cmd.Parameters.AddWithValue("@aTime", DateTime.Now.ToShortTimeString());
+            cmd.Parameters.AddWithValue("@TableName", lblTable.Text);
+            cmd.Parameters.AddWithValue("@WaiterName", lblWaiter.Text);
+            cmd.Parameters.AddWithValue("@status", "Pending");
+            cmd.Parameters.AddWithValue("@orderType", OrderType);
+            cmd.Parameters.AddWithValue("@total", Convert.ToInt32(lblTotal.Text));    // only saving data for kitchen value will update when payment received
+            cmd.Parameters.AddWithValue("@received", Convert.ToInt32(0));
+            cmd.Parameters.AddWithValue("@change", Convert.ToInt32(0));
+
+            if (MainClass.con.State == ConnectionState.Closed) { MainClass.con.Open(); }
+            if (MainID == 0) { MainID = Convert.ToInt32(cmd.ExecuteScalar()); } else { cmd.ExecuteNonQuery(); }
+            if (MainClass.con.State == ConnectionState.Open) { MainClass.con.Close(); }
+
+            foreach (DataGridViewRow row in guna2DataGridView1.Rows) {
+                detailID = Convert.ToInt32(row.Cells["dgvid"].Value);
+
+                if (detailID == 0) { //insert
+                    qry2 = @"Insert into tblDetails values(@MainID, @proID, @qty, @price, @amount)";
+                               
+                }
+                else { // update
+                    qry2 = @"update tblDetails set proID = @proID, qty = @qty, price = @price, amount = @amount
+                        where DetailID = @ID)";
+                }
+
+                SqlCommand cmd2 = new SqlCommand(qry2, MainClass.con);
+                cmd2.Parameters.AddWithValue("@ID", detailID);
+                cmd2.Parameters.AddWithValue("@MainID", MainID);
+                cmd2.Parameters.AddWithValue("@proID", Convert.ToInt32(row.Cells["dgvProID"].Value));
+                cmd2.Parameters.AddWithValue("@qty", Convert.ToInt32(row.Cells["dgvQty"].Value));
+                cmd2.Parameters.AddWithValue("@price", Convert.ToInt32(row.Cells["dgvPrice"].Value));
+                cmd2.Parameters.AddWithValue("@amount", Convert.ToInt32(row.Cells["dgvAmount"].Value));
+
+                if (MainClass.con.State == ConnectionState.Closed) { MainClass.con.Open(); }
+                cmd2.ExecuteNonQuery();
+                if (MainClass.con.State == ConnectionState.Open) { MainClass.con.Close(); }
+
+            }
+            guna2MessageDialog1.Show("Saved Successfully");
+            MainID = 0;
+            detailID = 0;
+            guna2DataGridView1.Rows.Clear();
+            lblTable.Text = "";
+            lblTable.Visible = false;
+            lblWaiter.Text = "";
+            lblWaiter.Visible = false;
+            lblTotal.Text = "00";
         }
     }
 }

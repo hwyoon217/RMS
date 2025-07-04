@@ -61,17 +61,18 @@
             this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClose.TabIndex = 1;
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.Location = new System.Drawing.Point(0, 361);
             this.guna2Panel1.Size = new System.Drawing.Size(355, 71);
-            this.guna2Panel1.TabIndex = 2;
+            this.guna2Panel1.TabIndex = 1;
             // 
             // guna2Panel2
             // 
             this.guna2Panel2.Size = new System.Drawing.Size(355, 110);
-            this.guna2Panel2.TabIndex = 3;
+            this.guna2Panel2.TabIndex = 2;
             // 
             // label2
             // 
