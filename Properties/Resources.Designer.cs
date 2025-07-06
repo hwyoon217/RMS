@@ -143,6 +143,16 @@ namespace RM.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_agreement_52 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-agreement-52", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_bill_100 {
             get {
                 object obj = ResourceManager.GetObject("icons8-bill-100", resourceCulture);

@@ -71,6 +71,12 @@
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="MainClass.cs" />
+    <Compile Include="Model\frmBillList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\frmBillList.Designer.cs">
+      <DependentUpon>frmBillList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\frmCategoryAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\frmBillList.resx">
+      <DependentUpon>frmBillList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Model\frmCategoryAdd.resx">
       <DependentUpon>frmCategoryAdd.cs</DependentUpon>
@@ -342,6 +351,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="icon_img\icons8-restaurant-table-90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon_img\icons8-agreement-52.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

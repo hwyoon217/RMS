@@ -212,8 +212,8 @@ namespace RM.Model {
                             Select SCOPE_IDENTITY()";    // get recent add id , value
             }
             else { // update
-                qry1 = @"update tblMain set status = @status, total = @total, received = @received, change = @change
-                        where MainID = @ID)";
+                qry1 = @"update tblMain set status = @status, total = @total, received = @received, change = @change, 
+                        orderType = @orderType where MainID = @ID";
             }
             
             SqlCommand cmd = new SqlCommand(qry1, MainClass.con);
@@ -252,6 +252,7 @@ namespace RM.Model {
                 cmd2.Parameters.AddWithValue("@price", Convert.ToInt32(row.Cells["dgvPrice"].Value));
                 cmd2.Parameters.AddWithValue("@amount", Convert.ToInt32(row.Cells["dgvAmount"].Value));
 
+
                 if (MainClass.con.State == ConnectionState.Closed) { MainClass.con.Open(); }
                 cmd2.ExecuteNonQuery();
                 if (MainClass.con.State == ConnectionState.Open) { MainClass.con.Close(); }
@@ -266,6 +267,10 @@ namespace RM.Model {
             lblWaiter.Text = "";
             lblWaiter.Visible = false;
             lblTotal.Text = "00";
+        }
+
+        private void btnBill_Click(object sender, EventArgs e) {
+            MainClass.BlurBackground(new frmBillList());
         }
     }
 }

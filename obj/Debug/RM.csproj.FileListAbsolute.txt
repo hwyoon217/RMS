@@ -55,3 +55,5 @@ C:\Users\admin\source\repos\RM\obj\Debug\RM.View.frmProductView.resources
 C:\Users\admin\source\repos\RM\obj\Debug\RM.View.frmStaffView.resources
 C:\Users\admin\source\repos\RM\obj\Debug\RM.View.frmTableView.resources
 C:\Users\admin\source\repos\RM\obj\Debug\RM.View.frmKitchenView.resources
+C:\Users\User\source\repos\RM\obj\Debug\RM.View.frmKitchenView.resources
+C:\Users\User\source\repos\RM\obj\Debug\RM.Model.frmBillList.resources
