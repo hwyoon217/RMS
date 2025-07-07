@@ -41,6 +41,7 @@
             this.btnExit = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnCheckout = new Guna.UI2.WinForms.Guna2Button();
             this.lblTotal = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.CategoryPanel = new System.Windows.Forms.FlowLayoutPanel();
@@ -53,8 +54,8 @@
             this.dgvQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tbSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.tbSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -219,6 +220,7 @@
             this.btnHold.Size = new System.Drawing.Size(78, 78);
             this.btnHold.TabIndex = 2;
             this.btnHold.Text = "Hold";
+            this.btnHold.Click += new System.EventHandler(this.btnHold_Click);
             // 
             // btnNew
             // 
@@ -311,6 +313,7 @@
             // 
             // guna2Panel2
             // 
+            this.guna2Panel2.Controls.Add(this.btnCheckout);
             this.guna2Panel2.Controls.Add(this.lblTotal);
             this.guna2Panel2.Controls.Add(this.label2);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -319,6 +322,27 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(1078, 100);
             this.guna2Panel2.TabIndex = 0;
+            // 
+            // btnCheckout
+            // 
+            this.btnCheckout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCheckout.AutoRoundedCorners = true;
+            this.btnCheckout.BackColor = System.Drawing.Color.Transparent;
+            this.btnCheckout.BorderRadius = 21;
+            this.btnCheckout.CustomizableEdges.TopRight = false;
+            this.btnCheckout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCheckout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCheckout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCheckout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCheckout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(85)))), ((int)(((byte)(126)))));
+            this.btnCheckout.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCheckout.ForeColor = System.Drawing.Color.White;
+            this.btnCheckout.Location = new System.Drawing.Point(693, 31);
+            this.btnCheckout.Name = "btnCheckout";
+            this.btnCheckout.Size = new System.Drawing.Size(97, 44);
+            this.btnCheckout.TabIndex = 2;
+            this.btnCheckout.Text = "Check Out";
+            this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click);
             // 
             // lblTotal
             // 
@@ -498,6 +522,15 @@
             this.dgvAmount.ReadOnly = true;
             this.dgvAmount.Width = 60;
             // 
+            // guna2MessageDialog1
+            // 
+            this.guna2MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.guna2MessageDialog1.Caption = "RMS";
+            this.guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+            this.guna2MessageDialog1.Parent = null;
+            this.guna2MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.guna2MessageDialog1.Text = null;
+            // 
             // tbSearch
             // 
             this.tbSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -519,15 +552,6 @@
             this.tbSearch.Size = new System.Drawing.Size(282, 50);
             this.tbSearch.TabIndex = 9;
             this.tbSearch.TextChanged += new System.EventHandler(this.tbSearch_TextChanged);
-            // 
-            // guna2MessageDialog1
-            // 
-            this.guna2MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-            this.guna2MessageDialog1.Caption = "RMS";
-            this.guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
-            this.guna2MessageDialog1.Parent = null;
-            this.guna2MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
-            this.guna2MessageDialog1.Text = null;
             // 
             // frmPOS
             // 
@@ -587,5 +611,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvAmount;
         private Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog1;
+        public Guna.UI2.WinForms.Guna2Button btnCheckout;
     }
 }

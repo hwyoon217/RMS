@@ -83,6 +83,12 @@
     <Compile Include="Model\frmCategoryAdd.Designer.cs">
       <DependentUpon>frmCategoryAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\frmCheckout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\frmCheckout.Designer.cs">
+      <DependentUpon>frmCheckout.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\frmPOS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Model\frmCategoryAdd.resx">
       <DependentUpon>frmCategoryAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\frmCheckout.resx">
+      <DependentUpon>frmCheckout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Model\frmPOS.resx">
       <DependentUpon>frmPOS.cs</DependentUpon>

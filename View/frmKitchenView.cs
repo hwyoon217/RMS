@@ -52,6 +52,7 @@ namespace RM.View
                 p2.Width = 230;
                 p2.Height = 125;
                 p2.FlowDirection = FlowDirection.TopDown;
+                p2.BorderStyle = BorderStyle.FixedSingle;
                 p2.Margin = new Padding(0,0,0,0);
 
                 Label lb1 = new Label();
@@ -90,7 +91,8 @@ namespace RM.View
                 int mid = 0;
                 mid = Convert.ToInt32(dt1.Rows[i]["MainID"].ToString());
 
-                string qry2 = @"select * from tblMain m inner join tblDetails d on m.MainID = d.MainID
+                string qry2 = @"select * from tblMain m 
+                                inner join tblDetails d on m.MainID = d.MainID
                                 inner join products p on p.pID = d.proID
                                 where m.MainID = " + mid + "";
 

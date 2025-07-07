@@ -76,8 +76,8 @@
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 510);
-            this.guna2Panel1.Size = new System.Drawing.Size(800, 51);
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 547);
+            this.guna2Panel1.Size = new System.Drawing.Size(800, 14);
             // 
             // guna2Panel2
             // 
@@ -146,7 +146,7 @@
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowTemplate.Height = 35;
             this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(736, 334);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(736, 381);
             this.guna2DataGridView1.TabIndex = 6;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;

@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace RM.Model {
     public partial class frmPOS : Form {
@@ -18,7 +19,7 @@ namespace RM.Model {
         }
 
         public int MainID = 0;
-        public string OrderType;
+        public string OrderType="";
 
         private void btnExit_Click(object sender, EventArgs e) {
             this.Close();
@@ -206,14 +207,22 @@ namespace RM.Model {
 
             int detailID = 0;
 
+            // if not choose ordertype, show error message
+            if (OrderType=="") {
+                guna2MessageDialog1.Show("Please select OrderType");
+                return;
+            }
+
+
+
             if (MainID == 0) { //insert
                 qry1 = @"Insert into tblMain values(@aDate, @aTime, @TableName, @WaiterName, @status, @orderType,
                         @total, @received, @change);
                             Select SCOPE_IDENTITY()";    // get recent add id , value
             }
             else { // update
-                qry1 = @"update tblMain set status = @status, total = @total, received = @received, change = @change, 
-                        orderType = @orderType where MainID = @ID";
+                qry1 = @"update tblMain set status = @status, total = @total, received = @received, change = @change
+                         where MainID = @ID";
             }
             
             SqlCommand cmd = new SqlCommand(qry1, MainClass.con);
@@ -238,6 +247,152 @@ namespace RM.Model {
                 if (detailID == 0) { //insert
                     qry2 = @"Insert into tblDetails values(@MainID, @proID, @qty, @price, @amount)";
                                
+                }
+                else { // update
+                    qry2 = @"update tblDetails set proID = @proID, qty = @qty, price = @price, amount = @amount
+                        where DetailID = @ID";
+                }
+
+                SqlCommand cmd2 = new SqlCommand(qry2, MainClass.con);
+                cmd2.Parameters.AddWithValue("@ID", detailID);
+                cmd2.Parameters.AddWithValue("@MainID", MainID);
+                cmd2.Parameters.AddWithValue("@proID", Convert.ToInt32(row.Cells["dgvProID"].Value));
+                cmd2.Parameters.AddWithValue("@qty", Convert.ToInt32(row.Cells["dgvQty"].Value));
+                cmd2.Parameters.AddWithValue("@price", Convert.ToInt32(row.Cells["dgvPrice"].Value));
+                cmd2.Parameters.AddWithValue("@amount", Convert.ToInt32(row.Cells["dgvAmount"].Value));
+
+
+                if (MainClass.con.State == ConnectionState.Closed) { MainClass.con.Open(); }
+                cmd2.ExecuteNonQuery();
+                if (MainClass.con.State == ConnectionState.Open) { MainClass.con.Close(); }
+
+            }
+            guna2MessageDialog1.Show("Saved Successfully");
+            MainID = 0;
+            detailID = 0;
+            guna2DataGridView1.Rows.Clear();
+            lblTable.Text = "";
+            lblTable.Visible = false;
+            lblWaiter.Text = "";
+            lblWaiter.Visible = false;
+            lblTotal.Text = "00";
+        }
+
+        public int id = 0;
+        private void btnBill_Click(object sender, EventArgs e) {
+            frmBillList frm = new frmBillList();
+            MainClass.BlurBackground(frm);
+
+            if (frm.MainID > 0) {
+                id = frm.MainID;
+                MainID = frm.MainID;
+                LoadEntries();
+            }
+        }
+
+        private void LoadEntries() {
+            string qry = @"select * from tblMain m 
+                                inner join tblDetails d on m.MainID = d.MainID
+                                inner join products p on p.pID = d.proID
+                                where m.MainID = " + id + "";
+
+            SqlCommand cmd2 = new SqlCommand(qry, MainClass.con);
+            DataTable dt2 = new DataTable();
+            SqlDataAdapter da2 = new SqlDataAdapter(cmd2);
+            da2.Fill(dt2);
+
+
+            if (dt2.Rows[0]["orderType"].ToString() == "Delivery") {
+                btnDelivery.Checked = true;
+                lblWaiter.Visible = false;
+                lblTable.Visible = false;
+                OrderType = "Delivery";
+            }
+            else if (dt2.Rows[0]["orderType"].ToString() == "Take away") {
+                btnTakeAway.Checked = true;
+                lblWaiter.Visible = false;
+                lblTable.Visible = false;
+                OrderType = "Take away";
+            }
+            else {
+                btnDin.Checked = true;
+                lblWaiter.Visible = true;
+                lblTable.Visible = true;
+                OrderType = "Din In";
+            }
+
+            guna2DataGridView1.Rows.Clear();
+
+            foreach (DataRow item in dt2.Rows) {
+                lblTable.Text = item["TableName"].ToString();
+                lblWaiter.Text = item["WaiterName"].ToString();
+
+                string detailid = item["DetailID"].ToString();
+                string proname = item["pName"].ToString();
+                string proid = item["proID"].ToString();
+                string qty = item["qty"].ToString();
+                string price = item["price"].ToString();
+                string amount = item["amount"].ToString();
+
+                object[] obj = { detailid, detailid, proid, proname, qty, price, amount };
+                guna2DataGridView1.Rows.Add(obj);
+            }
+            GetTotal();
+        }
+
+        private void btnCheckout_Click(object sender, EventArgs e) {
+            frmCheckout frm = new frmCheckout();
+            frm.MainID = id;
+            frm.amt = Convert.ToInt32(lblTotal.Text);
+            MainClass.BlurBackground(frm);
+
+            MainID = 0;
+            guna2DataGridView1.Rows.Clear();
+            lblTable.Text = "";
+            lblTable.Visible = false;
+            lblWaiter.Text = "";
+            lblWaiter.Visible = false;
+            lblTotal.Text = "00";
+        }
+
+        private void btnHold_Click(object sender, EventArgs e) {
+            string qry1 = "";  // main table
+            string qry2 = "";  // detail table
+
+            int detailID = 0;
+
+            if (MainID == 0) { //insert
+                qry1 = @"Insert into tblMain values(@aDate, @aTime, @TableName, @WaiterName, @status, @orderType,
+                        @total, @received, @change);
+                            Select SCOPE_IDENTITY()";    // get recent add id , value
+            }
+            else { // update
+                qry1 = @"update tblMain set status = @status, total = @total, received = @received, change = @change
+                         where MainID = @ID";
+            }
+
+            SqlCommand cmd = new SqlCommand(qry1, MainClass.con);
+            cmd.Parameters.AddWithValue("@ID", MainID);
+            cmd.Parameters.AddWithValue("@aDate", Convert.ToDateTime(DateTime.Now.Date));
+            cmd.Parameters.AddWithValue("@aTime", DateTime.Now.ToShortTimeString());
+            cmd.Parameters.AddWithValue("@TableName", lblTable.Text);
+            cmd.Parameters.AddWithValue("@WaiterName", lblWaiter.Text);
+            cmd.Parameters.AddWithValue("@status", "Hold");
+            cmd.Parameters.AddWithValue("@orderType", OrderType);
+            cmd.Parameters.AddWithValue("@total", Convert.ToInt32(lblTotal.Text));    // only saving data for kitchen value will update when payment received
+            cmd.Parameters.AddWithValue("@received", Convert.ToInt32(0));
+            cmd.Parameters.AddWithValue("@change", Convert.ToInt32(0));
+
+            if (MainClass.con.State == ConnectionState.Closed) { MainClass.con.Open(); }
+            if (MainID == 0) { MainID = Convert.ToInt32(cmd.ExecuteScalar()); } else { cmd.ExecuteNonQuery(); }
+            if (MainClass.con.State == ConnectionState.Open) { MainClass.con.Close(); }
+
+            foreach (DataGridViewRow row in guna2DataGridView1.Rows) {
+                detailID = Convert.ToInt32(row.Cells["dgvid"].Value);
+
+                if (detailID == 0) { //insert
+                    qry2 = @"Insert into tblDetails values(@MainID, @proID, @qty, @price, @amount)";
+
                 }
                 else { // update
                     qry2 = @"update tblDetails set proID = @proID, qty = @qty, price = @price, amount = @amount
@@ -267,10 +422,6 @@ namespace RM.Model {
             lblWaiter.Text = "";
             lblWaiter.Visible = false;
             lblTotal.Text = "00";
-        }
-
-        private void btnBill_Click(object sender, EventArgs e) {
-            MainClass.BlurBackground(new frmBillList());
-        }
+        }   
     }
 }
