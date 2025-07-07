@@ -20,6 +20,9 @@ namespace RM.Model {
 
         public int MainID = 0;
         public string OrderType="";
+        public int driverID = 0;
+        public string customerName = "";
+        public string customerPhone = "";
 
         private void btnExit_Click(object sender, EventArgs e) {
             this.Close();
@@ -147,8 +150,8 @@ namespace RM.Model {
         }
 
         private void btnNew_Click(object sender, EventArgs e) {
-            lblTable.Text = "";
-            lblTable.Visible = false;
+            lblDriverName.Text = "";
+            lblDriverName.Visible = false;
             lblWaiter.Text = "";
             lblWaiter.Visible = false;
 
@@ -158,33 +161,62 @@ namespace RM.Model {
         }
 
         private void btnDelivery_Click(object sender, EventArgs e) {
-            lblTable.Text = "";
-            lblTable.Visible = false;
+            lblDriverName.Text = "";
+            lblDriverName.Visible = false;
             lblWaiter.Text = "";
             lblWaiter.Visible = false;
             OrderType = "Delivery";
-        }
 
+            frmAddCustomer frm = new frmAddCustomer();
+            frm.mainID = MainID;
+            frm.orderType = OrderType;
+            MainClass.BlurBackground(frm);
+
+            if (frm.txtName.Text != "") {
+                driverID = frm.driverID;
+                lblDriverName.Text = "Customer Name : " + frm.txtName.Text + " Phone : " + frm.txtPhone.Text
+                                        + " Driver : " + frm.cbDriver.Text;
+                lblDriverName.Visible = true;
+                customerName = frm.txtName.Text;
+                customerPhone = frm.txtPhone.Text;
+            }
+        }
+        
         private void btnTakeAway_Click(object sender, EventArgs e) {
-            lblTable.Text = "";
-            lblTable.Visible = false;
+            lblDriverName.Text = "";
+            lblDriverName.Visible = false;
             lblWaiter.Text = "";
             lblWaiter.Visible = false;
             OrderType = "Take Away";
+
+            frmAddCustomer frm = new frmAddCustomer();
+            frm.mainID = MainID;
+            frm.orderType = OrderType;
+            MainClass.BlurBackground(frm);
+            
+            if (frm.txtName.Text != "") {
+                driverID = frm.driverID;
+                lblDriverName.Text = "Customer Name : " + frm.txtName.Text + " Phone : " + frm.txtPhone.Text;                  
+                lblDriverName.Visible = true;
+                customerName = frm.txtName.Text;
+                customerPhone = frm.txtPhone.Text;
+            }
         }
 
         private void btnDin_Click(object sender, EventArgs e) {
             OrderType = "Din In";
+            lblDriverName.Visible = false;
+
             // need to create form for table selection and waiter selection
             frmTableSelect frm = new frmTableSelect();
             MainClass.BlurBackground(frm);
             if (frm.TableName != "") {
-                lblTable.Text = frm.TableName;
-                lblTable.Visible = true;
+                lblDriverName.Text = frm.TableName;
+                lblDriverName.Visible = true;
             }
             else {
-                lblTable.Text = "";
-                lblTable.Visible = false;
+                lblDriverName.Text = "";
+                lblDriverName.Visible = false;
             }
 
             frmWaiterSelect frm2 = new frmWaiterSelect();
@@ -229,7 +261,7 @@ namespace RM.Model {
             cmd.Parameters.AddWithValue("@ID", MainID);
             cmd.Parameters.AddWithValue("@aDate", Convert.ToDateTime(DateTime.Now.Date));
             cmd.Parameters.AddWithValue("@aTime", DateTime.Now.ToShortTimeString());
-            cmd.Parameters.AddWithValue("@TableName", lblTable.Text);
+            cmd.Parameters.AddWithValue("@TableName", lblDriverName.Text);
             cmd.Parameters.AddWithValue("@WaiterName", lblWaiter.Text);
             cmd.Parameters.AddWithValue("@status", "Pending");
             cmd.Parameters.AddWithValue("@orderType", OrderType);
@@ -271,8 +303,8 @@ namespace RM.Model {
             MainID = 0;
             detailID = 0;
             guna2DataGridView1.Rows.Clear();
-            lblTable.Text = "";
-            lblTable.Visible = false;
+            lblDriverName.Text = "";
+            lblDriverName.Visible = false;
             lblWaiter.Text = "";
             lblWaiter.Visible = false;
             lblTotal.Text = "00";
@@ -305,26 +337,26 @@ namespace RM.Model {
             if (dt2.Rows[0]["orderType"].ToString() == "Delivery") {
                 btnDelivery.Checked = true;
                 lblWaiter.Visible = false;
-                lblTable.Visible = false;
+                lblDriverName.Visible = false;
                 OrderType = "Delivery";
             }
-            else if (dt2.Rows[0]["orderType"].ToString() == "Take away") {
+            else if (dt2.Rows[0]["orderType"].ToString() == "Take Away") {
                 btnTakeAway.Checked = true;
                 lblWaiter.Visible = false;
-                lblTable.Visible = false;
-                OrderType = "Take away";
+                lblDriverName.Visible = false;
+                OrderType = "Take Away";
             }
             else {
                 btnDin.Checked = true;
                 lblWaiter.Visible = true;
-                lblTable.Visible = true;
+                lblDriverName.Visible = true;
                 OrderType = "Din In";
             }
 
             guna2DataGridView1.Rows.Clear();
 
             foreach (DataRow item in dt2.Rows) {
-                lblTable.Text = item["TableName"].ToString();
+                lblDriverName.Text = item["TableName"].ToString();
                 lblWaiter.Text = item["WaiterName"].ToString();
 
                 string detailid = item["DetailID"].ToString();
@@ -348,8 +380,8 @@ namespace RM.Model {
 
             MainID = 0;
             guna2DataGridView1.Rows.Clear();
-            lblTable.Text = "";
-            lblTable.Visible = false;
+            lblDriverName.Text = "";
+            lblDriverName.Visible = false;
             lblWaiter.Text = "";
             lblWaiter.Visible = false;
             lblTotal.Text = "00";
@@ -375,7 +407,7 @@ namespace RM.Model {
             cmd.Parameters.AddWithValue("@ID", MainID);
             cmd.Parameters.AddWithValue("@aDate", Convert.ToDateTime(DateTime.Now.Date));
             cmd.Parameters.AddWithValue("@aTime", DateTime.Now.ToShortTimeString());
-            cmd.Parameters.AddWithValue("@TableName", lblTable.Text);
+            cmd.Parameters.AddWithValue("@TableName", lblDriverName.Text);
             cmd.Parameters.AddWithValue("@WaiterName", lblWaiter.Text);
             cmd.Parameters.AddWithValue("@status", "Hold");
             cmd.Parameters.AddWithValue("@orderType", OrderType);
@@ -417,8 +449,8 @@ namespace RM.Model {
             MainID = 0;
             detailID = 0;
             guna2DataGridView1.Rows.Clear();
-            lblTable.Text = "";
-            lblTable.Visible = false;
+            lblDriverName.Text = "";
+            lblDriverName.Visible = false;
             lblWaiter.Text = "";
             lblWaiter.Visible = false;
             lblTotal.Text = "00";
