@@ -236,12 +236,11 @@
             this.dgvdel.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dgvdel.FillWeight = 50F;
             this.dgvdel.HeaderText = "";
-            this.dgvdel.Image = global::RM.Properties.Resources.recyclebin;
+            this.dgvdel.Image = global::RM.Properties.Resources.icons8_print_96;
             this.dgvdel.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.dgvdel.MinimumWidth = 50;
             this.dgvdel.Name = "dgvdel";
             this.dgvdel.ReadOnly = true;
-            this.dgvdel.Visible = false;
             this.dgvdel.Width = 50;
             // 
             // frmBillList

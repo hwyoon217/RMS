@@ -1,8 +1,12 @@
-﻿using System;
+﻿using CrystalDecisions.Shared;
+using CrystalDecisions.CrystalReports.Engine;
+using RM.Reports;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -45,6 +49,8 @@ namespace RM.Model {
             }
         }
 
+      
+
         private void guna2DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e) {
             if (guna2DataGridView1.CurrentCell.OwningColumn.Name == "dgvedit") {
 
@@ -53,6 +59,33 @@ namespace RM.Model {
                 MainID = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells["dgvid"].Value);
                 this.Close();
                 
+            }
+
+            if (guna2DataGridView1.CurrentCell.OwningColumn.Name == "dgvdel") {
+                // print bill
+                MainID = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells["dgvid"].Value);
+                string qry = @"select * from tblMain m 
+                             inner join tblDetails d on d.MainID = m.MainID
+                             inner join products p on p.pID = d.proID
+                             where m.MainID = " + MainID  + " ";
+
+                SqlCommand cmd = new SqlCommand(qry, MainClass.con);
+                MainClass.con.Open();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                MainClass.con.Close();
+
+                frmPrint frm = new frmPrint();
+                rptBill cr = new rptBill();
+                cr.SetDatabaseLogon("sa", "std001");
+                //집에서 할 경우
+                //cr.SetDatabaseLogon("sa", "std001","DESKTOP-KO5M0LU","RM");
+                cr.SetDataSource(dt);
+
+                frm.crystalReportViewer1.ReportSource = cr;
+                frm.crystalReportViewer1.Refresh();
+                frm.Show();
             }
         }
 
