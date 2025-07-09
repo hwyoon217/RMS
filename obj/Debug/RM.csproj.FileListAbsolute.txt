@@ -48,3 +48,5 @@ C:\Users\admin\source\repos\RM\bin\Debug\stdole.dll
 C:\Users\admin\source\repos\RM\obj\Debug\RM.csproj.Up2Date
 C:\Users\admin\source\repos\RM\obj\Debug\RM.exe
 C:\Users\admin\source\repos\RM\obj\Debug\RM.pdb
+C:\Users\admin\source\repos\RM\obj\Debug\RM.View.frmReports.resources
+C:\Users\admin\source\repos\RM\obj\Debug\RM.Reports.frmSaleByCategory.resources

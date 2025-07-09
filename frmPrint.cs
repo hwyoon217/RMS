@@ -20,5 +20,9 @@ namespace RM
         private void frmPrint_Load(object sender, EventArgs e) {
             btnMax.PerformClick();
         }
+
+        private void btnExit_Click(object sender, EventArgs e) {
+            this.Close();
+        }
     }
 }
