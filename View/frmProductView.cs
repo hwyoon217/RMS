@@ -65,7 +65,7 @@ namespace RM.View {
                 if (guna2MessageDialog1.Show("Are you sure you want to delete?") == DialogResult.Yes) {
 
                     int id = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells["dgvid"].Value);
-                    string qry = "Delete from staff where staffID =" + id + "";
+                    string qry = "Delete from products where pID =" + id + "";
                     Hashtable ht = new Hashtable();
                     MainClass.SQL(qry, ht);
 

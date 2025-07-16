@@ -101,21 +101,22 @@ namespace RM
             }
         }
         public static void BlurBackground(Form Model) {
-            Form Background = new Form();
-            using (Model) {
-                Background.StartPosition = FormStartPosition.Manual;
-                Background.FormBorderStyle = FormBorderStyle.None;
-                Background.Opacity = 0.5d;
-                Background.BackColor = Color.Black;
-                Background.Size = frmMain.Instance.Size;
-                Background.Location = frmMain.Instance.Location;
-                Background.ShowInTaskbar = false;
-                Background.Show();
-                Model.Owner = Background;
-                Model.ShowDialog(Background);
-                Background.Dispose();
-            }
+            Form Background = new Form() {
+                StartPosition = FormStartPosition.Manual,
+                FormBorderStyle = FormBorderStyle.None,
+                Opacity = 0.5d,
+                BackColor = Color.Black,
+                Size = frmMain.Instance.Size,
+                Location = frmMain.Instance.Location,
+                ShowInTaskbar = false
+            };
+
+            Background.Show();
+            Model.Owner = Background;
+            Model.ShowDialog(Background);
+            Background.Dispose(); // OK: 직접 만든 폼
         }
+      
 
         // for cb fill
         public static void CBFill(string qry, ComboBox cb) {
