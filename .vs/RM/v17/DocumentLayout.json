@@ -3,27 +3,39 @@
   "WorkspaceRootPath": "C:\\Users\\admin\\source\\repos\\RM\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|C:\\Users\\admin\\source\\repos\\RM\\model\\frmpos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|c:\\users\\admin\\source\\repos\\rm\\view\\frmkitchenview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|solutionrelative:view\\frmkitchenview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|c:\\users\\admin\\source\\repos\\rm\\model\\frmbilllist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|solutionrelative:model\\frmbilllist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|c:\\users\\admin\\source\\repos\\rm\\model\\frmpos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|solutionrelative:model\\frmpos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|c:\\users\\admin\\source\\repos\\rm\\model\\frmpos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|solutionrelative:model\\frmpos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|c:\\users\\admin\\source\\repos\\rm\\view\\frmkitchenview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|solutionrelative:view\\frmkitchenview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|c:\\users\\admin\\source\\repos\\rm\\model\\frmwaiterselect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|solutionrelative:model\\frmwaiterselect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|c:\\users\\admin\\source\\repos\\rm\\model\\frmwaiterselect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|C:\\Users\\admin\\source\\repos\\RM\\model\\frmwaiterselect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|solutionrelative:model\\frmwaiterselect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|c:\\users\\admin\\source\\repos\\rm\\model\\frmtableselect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|C:\\Users\\admin\\source\\repos\\RM\\model\\frmpos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|solutionrelative:model\\frmpos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|C:\\Users\\admin\\source\\repos\\RM\\model\\frmwaiterselect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|solutionrelative:model\\frmwaiterselect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|C:\\Users\\admin\\source\\repos\\RM\\model\\frmtableselect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|solutionrelative:model\\frmtableselect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|c:\\users\\admin\\source\\repos\\rm\\model\\frmtableselect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|C:\\Users\\admin\\source\\repos\\RM\\model\\frmtableselect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0E125AAC-21E3-4338-AD17-F6282DAD7369}|RM.csproj|solutionrelative:model\\frmtableselect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -46,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,7 +74,45 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmBillList.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\RM\\Model\\frmBillList.cs",
+              "RelativeDocumentMoniker": "Model\\frmBillList.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\RM\\Model\\frmBillList.cs",
+              "RelativeToolTip": "Model\\frmBillList.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T04:29:00.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmKitchenView.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\RM\\View\\frmKitchenView.cs",
+              "RelativeDocumentMoniker": "View\\frmKitchenView.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\RM\\View\\frmKitchenView.cs",
+              "RelativeToolTip": "View\\frmKitchenView.cs",
+              "ViewState": "AgIAAIMAAAAAAAAAAAA8wJcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T03:47:18.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "frmKitchenView.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\RM\\View\\frmKitchenView.cs",
+              "RelativeDocumentMoniker": "View\\frmKitchenView.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\RM\\View\\frmKitchenView.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "View\\frmKitchenView.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T03:46:20.048Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "frmWaiterSelect.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\RM\\Model\\frmWaiterSelect.cs",
               "RelativeDocumentMoniker": "Model\\frmWaiterSelect.cs",
@@ -74,7 +124,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "frmWaiterSelect.cs",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\RM\\Model\\frmWaiterSelect.cs",
               "RelativeDocumentMoniker": "Model\\frmWaiterSelect.cs",
@@ -87,7 +137,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "frmTableSelect.cs",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\RM\\Model\\frmTableSelect.cs",
               "RelativeDocumentMoniker": "Model\\frmTableSelect.cs",
@@ -95,49 +145,46 @@
               "RelativeToolTip": "Model\\frmTableSelect.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAIwCoAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T01:13:36.598Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-24T01:13:36.598Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "frmTableSelect.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\RM\\Model\\frmTableSelect.cs",
               "RelativeDocumentMoniker": "Model\\frmTableSelect.cs",
               "ToolTip": "C:\\Users\\admin\\source\\repos\\RM\\Model\\frmTableSelect.cs [\uB514\uC790\uC778]",
               "RelativeToolTip": "Model\\frmTableSelect.cs [\uB514\uC790\uC778]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-24T01:04:10.126Z",
-              "EditorCaption": " [\uB514\uC790\uC778]"
+              "WhenOpened": "2025-07-24T01:04:10.126Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "frmPOS.cs",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\RM\\Model\\frmPOS.cs",
               "RelativeDocumentMoniker": "Model\\frmPOS.cs",
               "ToolTip": "C:\\Users\\admin\\source\\repos\\RM\\Model\\frmPOS.cs",
               "RelativeToolTip": "Model\\frmPOS.cs",
-              "ViewState": "AgIAAKMBAAAAAAAAAAAQwLcBAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAOcAAAAAAAAAAAAuwLcBAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-17T00:54:46.063Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "frmPOS.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\RM\\Model\\frmPOS.cs",
               "RelativeDocumentMoniker": "Model\\frmPOS.cs",
               "ToolTip": "C:\\Users\\admin\\source\\repos\\RM\\Model\\frmPOS.cs [\uB514\uC790\uC778]",
               "RelativeToolTip": "Model\\frmPOS.cs [\uB514\uC790\uC778]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-17T00:54:38.13Z",
-              "EditorCaption": " [\uB514\uC790\uC778]"
+              "WhenOpened": "2025-07-17T00:54:38.13Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "MainClass.cs",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\RM\\MainClass.cs",
               "RelativeDocumentMoniker": "MainClass.cs",
@@ -149,7 +196,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "frmMain.cs",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\RM\\frmMain.cs",
               "RelativeDocumentMoniker": "frmMain.cs",
@@ -161,7 +208,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "frmMain.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\RM\\frmMain.cs",
               "RelativeDocumentMoniker": "frmMain.cs",

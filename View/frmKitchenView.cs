@@ -144,6 +144,7 @@ namespace RM.View
                     guna2MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
                     guna2MessageDialog1.Show("Saved Successfully");
                 }
+                GetOrders();
             }
         }
     }
