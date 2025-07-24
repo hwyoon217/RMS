@@ -95,7 +95,7 @@ namespace RM.Model {
                     if (Convert.ToInt32(item.Cells["dgvProID"].Value) == wdg.id) {
                         item.Cells["dgvQty"].Value = int.Parse(item.Cells["dgvQty"].Value.ToString()) + 1;
                         item.Cells["dgvAmount"].Value = int.Parse(item.Cells["dgvQty"].Value.ToString()) *
-                            double.Parse(item.Cells["dgvPrice"].Value.ToString());
+                            int.Parse(item.Cells["dgvPrice"].Value.ToString());
 
                         GetTotal(); // 토탈 가격 갱신
                         return;
@@ -307,6 +307,8 @@ namespace RM.Model {
             guna2DataGridView1.Rows.Clear();
             lblDriverName.Text = "";
             lblDriverName.Visible = false;
+            lblTable.Text = "";
+            lblTable.Visible = false;
             lblWaiter.Text = "";
             lblWaiter.Visible = false;
             lblTotal.Text = "00";
